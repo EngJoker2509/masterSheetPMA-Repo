@@ -267,7 +267,7 @@ def Main_Menu():
             for j, value in enumerate(row):
                 sheet.cell(row=start_row + i, column=j + 1).value = value
         MFIs.save(
-            'C:/Users/admin11/Desktop/PythonProgram/Lib/site-packages/MFIs.xlsx')
+            'C:/Users/admin11/Desktop/PythonProgram/MasterSheet/MFIs.xlsx')
 
         ############################################################################################
 
@@ -308,7 +308,7 @@ def Main_Menu():
                 sheet5.cell(row=start_row+i, column=j+1).value = data[i][j]
 
         workbook.save(
-            'C:/Users/admin11/Desktop/PythonProgram/Lib/site-packages/CallReport.xlsx')
+            'C:/Users/admin11/Desktop/PythonProgram/MasterSheet/CallReport.xlsx')
         window.destroy()
 
     except:
