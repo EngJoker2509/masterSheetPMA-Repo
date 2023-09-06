@@ -169,6 +169,9 @@ def Main_Menu():
         End_date = str(entry.get())
         Start_date = str(entry1.get())
 
+
+        print("Sth To change")
+        
         print("End date :-", End_date)
         print("Start Date :-", Start_date)
         CurrentPortfolio = ConnectionSQLServerCurrentPortfolio()
