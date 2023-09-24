@@ -161,6 +161,217 @@ def ConnectionSQLServerFacilities():
     conn.close()
     return rows
 
+
+def ConnectionSQLServerAnnex(end_date):
+    conn = pymssql.connect(server='T24DB-REPORTS'                           # ,user='zeppelin'
+                           # ,password='zeppelin'
+                           , database='His_T24_Reports')
+    cursor = conn.cursor(as_dict=True)
+    cursor.callproc('dbo.API_Annex', (end_date,))
+    rows = []
+    for row in cursor:
+        rows.append(row)
+
+    # print(rows)
+    # Close cursor and connection
+    cursor.close()
+    conn.close()
+    return rows
+
+
+def ConnectionSQLServerAccountsReceivableAnnex(end_date):
+    conn = pymssql.connect(server='T24DB-REPORTS'                           # ,user='zeppelin'
+                           # ,password='zeppelin'
+                           , database='His_T24_Reports')
+    cursor = conn.cursor(as_dict=True)
+    cursor.callproc('dbo.API_AccountsReceivable_TABLE_ANNEX', (end_date,))
+    rows = []
+    for row in cursor:
+        rows.append(row)
+
+    # print(rows)
+    # Close cursor and connection
+    cursor.close()
+    conn.close()
+    return rows
+
+
+def ConnectionSQLServerOtherAssetsAnnex(end_date):
+    conn = pymssql.connect(server='T24DB-REPORTS'                           # ,user='zeppelin'
+                           # ,password='zeppelin'
+                           , database='His_T24_Reports')
+    cursor = conn.cursor(as_dict=True)
+    cursor.callproc('dbo.API_OtherAssets_TABLE_ANNEX', (end_date,))
+    rows = []
+    for row in cursor:
+        rows.append(row)
+
+    # print(rows)
+    # Close cursor and connection
+    cursor.close()
+    conn.close()
+    return rows
+
+
+def ConnectionSQLServerIntangibleAssetsAnnex(end_date):
+    conn = pymssql.connect(server='T24DB-REPORTS'                           # ,user='zeppelin'
+                           # ,password='zeppelin'
+                           , database='His_T24_Reports')
+    cursor = conn.cursor(as_dict=True)
+    cursor.callproc('dbo.API_IntangibleAssets_TABLE_ANNEX', (end_date,))
+    rows = []
+    for row in cursor:
+        rows.append(row)
+
+    # print(rows)
+    # Close cursor and connection
+    cursor.close()
+    conn.close()
+    return rows
+
+
+def ConnectionSQLServerFixedAssetsAnnex(end_date):
+    conn = pymssql.connect(server='T24DB-REPORTS'                           # ,user='zeppelin'
+                           # ,password='zeppelin'
+                           , database='His_T24_Reports')
+    cursor = conn.cursor(as_dict=True)
+    cursor.callproc('dbo.API_FixedAssets_TABLE_ANNEX', (end_date,))
+    rows = []
+    for row in cursor:
+        rows.append(row)
+
+    # print(rows)
+    # Close cursor and connection
+    cursor.close()
+    conn.close()
+    return rows
+
+
+def ConnectionSQLServerOtherShortTermLiabilitiesAnnex(end_date):
+    conn = pymssql.connect(server='T24DB-REPORTS'                           # ,user='zeppelin'
+                           # ,password='zeppelin'
+                           , database='His_T24_Reports')
+    cursor = conn.cursor(as_dict=True)
+    cursor.callproc(
+        'dbo.API_OtherShortTermLiabilities_TABLE_ANNEX', (end_date,))
+    rows = []
+    for row in cursor:
+        rows.append(row)
+
+    # print(rows)
+    # Close cursor and connection
+    cursor.close()
+    conn.close()
+    return rows
+
+
+def ConnectionSQLServerOtherProvisionsAnnex(end_date):
+    conn = pymssql.connect(server='T24DB-REPORTS'                           # ,user='zeppelin'
+                           # ,password='zeppelin'
+                           , database='His_T24_Reports')
+    cursor = conn.cursor(as_dict=True)
+    cursor.callproc(
+        'dbo.API_OtherProvisions_TABLE_ANNEX', (end_date,))
+    rows = []
+    for row in cursor:
+        rows.append(row)
+
+    # print(rows)
+    # Close cursor and connection
+    cursor.close()
+    conn.close()
+    return rows
+
+
+def ConnectionSQLServerOtherLiabilitiesAnnex(end_date):
+    conn = pymssql.connect(server='T24DB-REPORTS'                           # ,user='zeppelin'
+                           # ,password='zeppelin'
+                           , database='His_T24_Reports')
+    cursor = conn.cursor(as_dict=True)
+    cursor.callproc(
+        'dbo.API_OtherLiabilities_TABLE_ANNEX', (end_date,))
+    rows = []
+    for row in cursor:
+        rows.append(row)
+
+    # print(rows)
+    # Close cursor and connection
+    cursor.close()
+    conn.close()
+    return rows
+
+
+def ConnectionSQLServerOtherReservesAnnex(end_date):
+    conn = pymssql.connect(server='T24DB-REPORTS'                           # ,user='zeppelin'
+                           # ,password='zeppelin'
+                           , database='His_T24_Reports')
+    cursor = conn.cursor(as_dict=True)
+    cursor.callproc(
+        'dbo.API_OtherReserves_TABLE_ANNEX', (end_date,))
+    rows = []
+    for row in cursor:
+        rows.append(row)
+
+    # print(rows)
+    # Close cursor and connection
+    cursor.close()
+    conn.close()
+    return rows
+
+
+def ConnectionSQLServerOtherOperatingRevenuesAnnex(end_date):
+    conn = pymssql.connect(server='T24DB-REPORTS'                           # ,user='zeppelin'
+                           # ,password='zeppelin'
+                           , database='His_T24_Reports')
+    cursor = conn.cursor(as_dict=True)
+    cursor.callproc(
+        'dbo.API_OtherOperatingRevenues_TABLE_ANNEX', (end_date,))
+    rows = []
+    for row in cursor:
+        rows.append(row)
+
+    # print(rows)
+    # Close cursor and connection
+    cursor.close()
+    conn.close()
+    return rows
+
+
+def ConnectionSQLServerOtherFinancialExpensesAnnex(end_date):
+    conn = pymssql.connect(server='T24DB-REPORTS'                           # ,user='zeppelin'
+                           # ,password='zeppelin'
+                           , database='His_T24_Reports')
+    cursor = conn.cursor(as_dict=True)
+    cursor.callproc(
+        'dbo.API_OtherFinancialExpenses_TABLE_ANNEX', (end_date,))
+    rows = []
+    for row in cursor:
+        rows.append(row)
+
+    # print(rows)
+    # Close cursor and connection
+    cursor.close()
+    conn.close()
+    return rows
+
+
+def ConnectionSQLServerOtherAdministrativeExpensesAnnex(end_date):
+    conn = pymssql.connect(server='T24DB-REPORTS'                           # ,user='zeppelin'
+                           # ,password='zeppelin'
+                           , database='His_T24_Reports')
+    cursor = conn.cursor(as_dict=True)
+    cursor.callproc(
+        'dbo.API_OtherAdministrativeExpenses_TABLE_ANNEX', (end_date,))
+    rows = []
+    for row in cursor:
+        rows.append(row)
+
+    # print(rows)
+    # Close cursor and connection
+    cursor.close()
+    conn.close()
+    return rows
+
 # if __name__ == "__main__":
 
 
@@ -182,6 +393,7 @@ def Main_Menu():
         sheet3 = workbook['MFIs_XX.C.Q.YY_IS']
         sheet4 = workbook['MFIs_XX.C.Q.YY_BS']
         sheet5 = workbook['MFIs_XX.C.Q.YY_Facilities']
+        sheet6 = workbook['MFIs_XX.C.Q.YY_Annex']
 
         start_row = 10
         for i, row in enumerate(data):
@@ -283,7 +495,7 @@ def Main_Menu():
                 sheet3.cell(row=start_row + i, column=3).value = data[0][k]
                 k = k+1
 
-        ############################################################################################
+        ###########################################################################################
 
         balanceSheet = ConnectionSQLServerbalanceSheet(END_DATE=End_date)
         data = balanceSheet
@@ -295,7 +507,7 @@ def Main_Menu():
                 sheet4.cell(row=start_row + i, column=3).value = data[0][k]
                 k = k+1
 
-        ############################################################################################
+        ###########################################################################################
 
         Facilites = ConnectionSQLServerFacilities()
         data = Facilites
@@ -307,10 +519,195 @@ def Main_Menu():
             for j in range(0, 18, 1):
                 sheet5.cell(row=start_row+i, column=j+1).value = data[i][j]
 
+        ###########################################################################################
+
+        AccountsReceivable = ConnectionSQLServerAccountsReceivableAnnex(
+            End_date)
+        start_row = 17
+        for i in range(0, len(AccountsReceivable), 1):
+            sheet6.cell(row=start_row+i,
+                        column=1).value = AccountsReceivable[i]['Row Number']
+            sheet6.cell(row=start_row+i,
+                        column=2).value = AccountsReceivable[i]['DESCRIPTION']
+            sheet6.cell(row=start_row+i,
+                        column=3).value = AccountsReceivable[i]['TOTAL']
+
+        ###########################################################################################
+
+        otherAssets = ConnectionSQLServerOtherAssetsAnnex(End_date)
+        start_row = 41
+        for i in range(0, len(otherAssets), 1):
+            sheet6.cell(row=start_row+i,
+                        column=1).value = otherAssets[i]['Row Number']
+            sheet6.cell(row=start_row+i,
+                        column=2).value = otherAssets[i]['DESCRIPTION']
+            sheet6.cell(row=start_row+i,
+                        column=3).value = otherAssets[i]['TOTAL']
+
+        ###########################################################################################
+        #
+        IntangibleAssets = ConnectionSQLServerIntangibleAssetsAnnex(End_date)
+
+        sheet6.cell(row=64, column=3).value = IntangibleAssets[0]['TOTAL']
+        sheet6.cell(row=70, column=3).value = IntangibleAssets[1]['TOTAL']
+
+        ###########################################################################################
+
+        fixedAssets = ConnectionSQLServerFixedAssetsAnnex(End_date)
+        sheet6.cell(row=76, column=3).value = fixedAssets[0]['TOTAL']
+        sheet6.cell(row=78, column=3).value = fixedAssets[1]['TOTAL']
+        sheet6.cell(row=79, column=3).value = fixedAssets[2]['TOTAL']
+        sheet6.cell(row=80, column=3).value = fixedAssets[3]['TOTAL']
+        sheet6.cell(row=85, column=3).value = fixedAssets[4]['TOTAL']
+
+        ###########################################################################################
+
+        OtherShortTermLiabilities = ConnectionSQLServerOtherShortTermLiabilitiesAnnex(
+            End_date)
+        start_row = 92
+        for i in range(0, len(OtherShortTermLiabilities), 1):
+            sheet6.cell(row=start_row+i,
+                        column=1).value = OtherShortTermLiabilities[i]['Row Number']
+            sheet6.cell(row=start_row+i,
+                        column=2).value = OtherShortTermLiabilities[i]['DESCRIPTION']
+            sheet6.cell(row=start_row+i,
+                        column=3).value = OtherShortTermLiabilities[i]['TOTAL']
+
+        ############################################################################################
+
+        OtherProvisions = ConnectionSQLServerOtherProvisionsAnnex(
+            End_date)
+
+        sheet6.cell(row=116,
+                    column=3).value = OtherProvisions[0]['TOTAL']
+        sheet6.cell(row=117,
+                    column=3).value = OtherProvisions[1]['TOTAL']
+
+        sheet6.cell(row=118,
+                    column=1).value = 3
+        # OtherProvisions[2]['Row Number']
+        sheet6.cell(row=118,
+                    column=2).value = OtherProvisions[2]['DESCRIPTION']
+        sheet6.cell(row=118,
+                    column=3).value = OtherProvisions[2]['TOTAL']
+
+        sheet6.cell(row=119,
+                    column=1).value = 4
+        # OtherProvisions[3]['Row Number']
+        sheet6.cell(row=119,
+                    column=2).value = OtherProvisions[3]['DESCRIPTION']
+        sheet6.cell(row=119,
+                    column=3).value = OtherProvisions[3]['TOTAL']
+
+        ############################################################################################
+
+        OtherLiabilities = ConnectionSQLServerOtherLiabilitiesAnnex(End_date)
+        start_row = 132
+        for i in range(0, len(OtherLiabilities), 1):
+            sheet6.cell(row=start_row+i,
+                        column=1).value = OtherLiabilities[i]['Row Number']
+            sheet6.cell(row=start_row+i,
+                        column=2).value = OtherLiabilities[i]['DESCRIPTION']
+            sheet6.cell(row=start_row+i,
+                        column=3).value = OtherLiabilities[i]['TOTAL']
+
+        ############################################################################################
+
+        otherReserves = ConnectionSQLServerOtherReservesAnnex(End_date)
+        print(otherReserves)
+        if not otherReserves:
+            otherReserves = [
+                {
+                    'Row Number': 1,
+                    'DESCRIPTION': 'Geo Political Risk Reserve',
+                    'TOTAL': 0.0
+                },
+                {
+
+                    'Row Number': 2,
+                    'DESCRIPTION': 'Counter Cyclical Risk Reserve',
+                    'TOTAL': 0.0
+                },
+                {
+
+                    'Row Number': 3,
+                    'DESCRIPTION': 'General Risk Reserve',
+                    'TOTAL': 0.0
+                },
+                {
+
+                    'Row Number': 4,
+                    'DESCRIPTION': 'Compulsory Reserve',
+                    'TOTAL': 0.0
+                },
+                {
+
+                    'Row Number': 5,
+                    'DESCRIPTION': 'Reserve to Support Equity',
+                    'TOTAL': 0.0
+                }
+            ]
+            start_row = 156
+            for i in range(0, len(otherReserves), 1):
+                sheet6.cell(row=start_row+i,
+                            column=1).value = otherReserves[i]['Row Number']
+                sheet6.cell(row=start_row+i,
+                            column=2).value = otherReserves[i]['DESCRIPTION']
+                sheet6.cell(row=start_row+i,
+                            column=3).value = otherReserves[i]['TOTAL']
+        else:
+            start_row = 156
+            for i in range(0, len(otherReserves), 1):
+                sheet6.cell(row=start_row+i,
+                            column=1).value = otherReserves[i]['Row Number']
+                sheet6.cell(row=start_row+i,
+                            column=2).value = otherReserves[i]['DESCRIPTION']
+                sheet6.cell(row=start_row+i,
+                            column=3).value = otherReserves[i]['TOTAL']
+        ############################################################################################
+
+        OtherOperatingRevenues = ConnectionSQLServerOtherOperatingRevenuesAnnex(
+            End_date)
+        start_row = 180
+        for i in range(0, len(OtherOperatingRevenues), 1):
+            sheet6.cell(row=start_row+i,
+                        column=1).value = OtherOperatingRevenues[i]['Row Number']
+            sheet6.cell(row=start_row+i,
+                        column=2).value = OtherOperatingRevenues[i]['DESCRIPTION']
+            sheet6.cell(row=start_row+i,
+                        column=3).value = OtherOperatingRevenues[i]['TOTAL']
+
+        ############################################################################################
+
+        OtherOperatingRevenues = ConnectionSQLServerOtherFinancialExpensesAnnex(
+            End_date)
+        start_row = 204
+        for i in range(0, len(OtherOperatingRevenues), 1):
+            sheet6.cell(row=start_row+i,
+                        column=1).value = OtherOperatingRevenues[i]['Row Number']
+            sheet6.cell(row=start_row+i,
+                        column=2).value = OtherOperatingRevenues[i]['DESCRIPTION']
+            sheet6.cell(row=start_row+i,
+                        column=3).value = OtherOperatingRevenues[i]['TOTAL']
+
+        ############################################################################################
+
+        OtherAdministrativeExpenses = ConnectionSQLServerOtherAdministrativeExpensesAnnex(
+            End_date)
+        start_row = 228
+        for i in range(0, len(OtherAdministrativeExpenses), 1):
+            sheet6.cell(row=start_row+i,
+                        column=1).value = OtherAdministrativeExpenses[i]['Row Number']
+            sheet6.cell(row=start_row+i,
+                        column=2).value = OtherAdministrativeExpenses[i]['DESCRIPTION']
+            sheet6.cell(row=start_row+i,
+                        column=3).value = OtherAdministrativeExpenses[i]['TOTAL']
+
         workbook.save(
             'C:/Users/admin11/Desktop/PythonProgram/MasterSheet/CallReport.xlsx')
         window.destroy()
 
+        ############################################################################################
     except:
         messagebox.showerror('Error')
 
